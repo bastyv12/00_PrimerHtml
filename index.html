@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Esta es la cabecera de nuestro HTML.. aquí se configuran, por lo general,
+        cosas que NO SON VISIBLES al usuario.
+            Por ejemplo, aquí van los CSS, configuraciones de la página para que acepte
+        caracteres especiales, que sea responsiva, entre otros
+        -->
+    <!-- También se puede editar el title, que sería lo que se ve en la pestaña
+        del navegador -->
+    <title>Mi título</title>
+    <!-- UTF-8 le indica al navegador que debe ser capaz de mostrar caracteres especiales -->
+    <meta charset="UTF-8" />
+    <!-- Reescalado de la página para ver en distintos dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- En el cuerpo del HTML vamos a poner las etiquetas que
+        tienen un efecto visible en el navegador -->
+    <h1>Formulario Persona</h1>
+    <h2>Subtítulo</h2>
+    <h3>Subtítulo más chico</h3>
+    <h4>Aún <span style="color: orange">más</span> chico hasta el h6...</h4>
+
+    <!-- FORM me permite "abrazar" todos los elementos que quiero que sean enviados al servidor.
+    No causa ninguna diferencia visualmente, es solo una etiqueta de lógica de uso. -->
+    <form>
+      <!-- Los DIVs se crearon para ser contenedores.. inicialmente
+    no son visibles a menos que les asignes un color o un borde.
+        La idea principal es ocupar todo el ancho de la pantalla,
+    para obligar a los siguientes elementos a saltar de línea. -->
+      <div style="background: greenyellow">
+        <!-- Para escribir algo breve se suele usar label -->
+        <label>Nombre</label>
+        <input type="text" name="nombre" />
+      </div>
+      <!-- br genera un espacio vacío.. sirve también para hacer saltos de línea -->
+      <br />
+      <div style="background: lightblue">
+        <label>Apellido</label>
+        <input type="text" name="apellido" />
+      </div>
+      <br />
+      <div style="background: lightgray">
+        <label>Dirección</label>
+        <input type="text" />
+      </div>
+      <br />
+      <div>
+        <label>Ciudad</label>
+        <!-- Despliega una lista de opciones.
+          Cada opción debe ser creada con la etiqueta option -->
+        <select>
+          <!-- Lo que va entre los tags de option es lo que se mostrará al usuario -->
+          <option>Santiago</option>
+          <option>Temuco</option>
+          <option>Valdivia</option>
+          <option>Osorno</option>
+          <option>Puerto Montt</option>
+        </select>
+      </div>
+      <br />
+      <div>
+        <label>Es Becado??</label>
+        <!-- Si queremos que este checkeado por defecto, le agregamos la propiedad checked -->
+        <input type="checkbox" checked />
+      </div>
+      <br />
+      <div>
+        <!-- La gracia de los radio es que solo 1 de ellos quede seleccionado.
+        Para evitar el problema de que quedan seleccionados todos, debemos
+        darles a todos la propiedad name con un mismo valor. -->
+        <input type="radio" name="carrera">Turismo
+        <input type="radio" name="carrera">Automatización
+        <input type="radio" name="carrera">Informática
+      </div>
+      <br />
+      <div>
+        <label>Comentarios</label>
+        <!-- cols define el ancho y rows el alto del textarea -->
+        <textarea cols="20" rows="2"></textarea>
+      </div>
+      <br />
+      <!-- ANTES de que cierre el form necesitamos un botón de tipo SUBMIT. -->
+      <!-- Forma antigua de hacer el botón. Menos eficiente, porque se desperdicia
+      la propiedad value para poner el texto que se mostrará -->
+      <input type="reset" value="Resetear" />
+      <!-- Forma moderna de crear botones. No desperdicia la propiedad value
+      porque el texto mostrado al usuario es lo que escribas entre los tags de button. -->
+      <button type="submit" value="1">Enviar Datos</button>
+    </form>
+    <!-- Tanto ul como ol nos permite, en conjunto con li, generar un lista
+    de elementos. ol le agrega una numeración automáticamente y ul una viñeta -->
+    <!-- <ol> -->
+    <ul>
+      <li>Durazno</li>
+      <li>Manzana</li>
+      <li>Pera</li>
+      <li>Limón</li>
+    </ul>
+
+    <!-- a href por sí solo te sirve para referencia archivos que están dentro de tu carpeta de proyecto.
+    Así que si pones google.cl solo estarás indicándole que quieres a un archivo que está en la misma carpeta de este HTML llamado google.cl -->
+    <a href="google.cl">No sirve como link a la web</a>
+    <!-- Para referenciar a un sitio de internet distinto al nuestro, usaremos http o https incialmente -->
+    <a href="https://google.cl">Ir a Google</a>
+    <!-- Al poner mailto: al comienzo de href estamos indicando que es un enlace para enviar un correo directamente -->
+    <a href="mailto:franco.luna@inacapmail.cl">
+      franco.luna@inacapmail.cl
+    </a>
+
+    <!-- p nos sirve para encerrar un párrafo. Generará un margen (espacio en blanco)
+    en la parte superior e inferior. -->
+    <p>
+      <b>Lorem</b> ipsum <strong>dolor</strong> sit amet
+      <em>consectetur</em> adipisicing <i>elit</i>. Aut ipsa repellat
+      <u>exercitationem</u> rem maiores quidem voluptatum. Iure beatae fuga vel
+      reiciendis dignissimos impedit, pariatur suscipit eum non fugit nihil
+      doloribus!
+    </p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </body>
+</html>
